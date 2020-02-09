@@ -77,107 +77,94 @@ La commande whereis nous renvoie :
 Ce sont les différents chemins de localisation de ls
 
 
-4. La commande *ll* permet d'afficher l'intégralité des fichiers, y compris les fichiers cachés. Elle ne possède pas d'entrée dans le manuel car il s'agit d'un raccourci de la commande :
-
-	> *ls -alF* (cf. alias).
+Question 4) 
+La commande *ll* permet d'afficher les fichiers du repertoire où l'on se situe, même les fichiers cachés. Cette commande n'a pas d'entrée de manuel car il s'agit d'un alias pour *ls -alF* comme le confirme la commande *alias*:.
 
 
 Question 5)
 La commande ls/bin permet de voir le contenu du dossier bin
 
-6. La commande ls . . renvoie les répertoires parents du dossier dans lequel on se trouve.
+Question 6) 
+La commande ls . . renvoie le contenu du repertoire parent à celui dans lequel on se trouve.
 
 Question 7)
-C'est la commande pwd qui a ce rôle.
+C'est la commande pwd qui donne le chemin complet du dossier courant.
 
-8. On obtient un fichier texte *plop* dans le répertoire courant, avec écrit *yo* une fois dedans.
+Question 8)
+Cette manipulation crée un fichier nommé *plop* dans le repertoire courant, avec comme contenu : *yo*.
 
-9. On obtient un fichier texte *plop* dans le répertoire courant, avec écrit *yo* deux fois dedans.
+Question 9)
+Cette manipulation crée un fichier nommé *plop* dans le repertoire courant, avec comme contenu : *yo* deux fois.
+*>* écrase le contenu et ecris.
+*>>* ajoute du contenu.
 
-	On en déduit que l'utilisation d'un seul chevron (>) écrase et ajoute du texte. L'utilisation de deux chevrons ajoute simplement le texte dans le fichier avec un retour à la ligne.
+Question 10)
+La commande *file* sert à donner le type d'un fichier. (ex : mp3, ASCII text,...)
 
-10. La commande *file* permet de déterminer le type d'un fichier ou d'un dossier. Par exemple, pour *plop*, il s'agit d'un *ASCII text*, pour *fichier1* d'un *empty*, pour *dossier1* d'un *directory*.
+Question 11)
+Lorsque l'on modifie *toto* on remarque que l'on modifie aussi *titi*.
+Si on supprime *toto* *titi* n'est pas supprimé et son contenu ne change pas.
 
-11. On remarque qu'en modifiant *toto*, on modifie également *titi*. En revanche, lorsque l'on supprime *toto*, cela ne supprime pas *titi* et son contenu reste inchangé.
+Question 12)
+La modification de *titi* ou *tutu* engendre la modification de l'autre. 
+Quand on suuprime *titi* on recoit un message qui explique que *tutu* n'est plus lié à *titi*.
 
-12. Lorsqu'on modifie l'un des documents, l'autre s'actualise automatiquement. Contrairement à la question précédente, lorsqu'on supprime *titi*, *tutu* ne pointe plus vers rien. Le lien symbolique est cassé (*broken symbolic link to titi*).
+Question 13) *CTRL + S* arrête le défilement, et *CTRL + Q* reprend le défilement.
 
-13. Pour arrêter le défilement, il faut taper *CTRL + S*, et *CTRL + Q* pour reprendre le défilement.
+Question 14) 
+Affichage des 5 premières lignes de *syslog*: *head -5 /var/log/syslog*
 
-14. Nous réalisons la commande suivante afin d'afficher les 5 premières lignes de *syslog* :
+Affichage des 15 dernières lignes de *syslog* : *tail -15 /var/log/syslog*
 
-	> *head -5 /var/log/syslog*
+Affichage des lignes entre 10 et 20 de *syslog* : *head -n 10 /var/log/syslog | tail -n 20*
 
-	Pour afficher les 15 dernières lignes de *syslog* :
 
-	> *tail -15 /var/log/syslog*
+Question 15)
+dmesg | less permet d'afficher la mémoire tampon du message du noyau.
 
-	Pour afficher les lignes entre 10 et 20 de *syslog* :
+Question 16)
+/etc/passwd contien les mots de passes associés aux utilisateurs du systèmes.
+Pour afficher la page du manuel associé on fait : *man passwd*
+*Passwd* est aussi une commande permettant à l'utilisateur de changer son mot de passe.
 
-	> *head -n 10 /var/log/syslog | tail -n 20*
+Question 17) 
+Affichage de la colonne triée par ordre alphabétique inverse : *sort +0 -r /etc/passwd*
 
-15. Cette commande *dmesg* | *less* (*display message*) permet d'afficher la mémoire tampon de message du noyau.
+Question 18)
+Commande pour connaitre le nombre d'utilisateurs sur cette machine : *wc -l /etc/passwd*
 
-16. Le fichier *passwd* contient toutes les informations relatives aux logins et mots de passe des comptes d'utilisateurs.
+Question 19) 
+Commande pour savoir combien de pages de manuel comportent le mot-clé conversion dans leur description: *man -k conversion*
+Résultat : 4 pages de manuel contiennent ce mot clé.
 
-	Pour afficher la page du manuel de passwd, il suffit de taper :
 
-	> *man passwd*
+Question 20) 
+Commande : *find / -name passwd*
 
-17. Pour afficher uniquement la colonne triée par ordre alphabétique inverse, il faut utiliser la commande :
 
-	> *sort +0 -r /etc/passwd*
+Question 21) 
+Pour rediriger le résultat dans un fihcier *~/list_passwd_files.txt* et que les erreurs soient redirigées vers me fichier spécial */dev/null* on fait la commande : *find / -name passwd > ~/list_passwd_files.txt 2>> /dev/null*
 
-18. Pour connaître le nombre d'utilisateurs, on utlise la commande suivante :
+Question 22) En utilisant la commande suivante :
+Commande : *grep -ll*
+Résultat : l'alias *ll* est défini dans *grep [OPTION]... PATTERNS[FILE]...*
 
-	> *wc -l /etc/passwd*
 
-	Cette commande nous indique 31 utilisateurs.
+Question 23) 
+Installation de *locate* : *apt install mlocate*
+Chercher le fichier history.log : *locate history.log*
+Résultat : */var/log/apt/history.log*
 
-19. Pour connaître le nombre des pages contenant le mot-clé *conversion*, on utilise la commande suivante :
-
-	> *man -k conversion*
-
-	On obtient 4 lignes de résultats, on en déduit que 4 pages de manuel contiennent le mot *conversion*.
-
-20. La commande suivante permet de trouver les fichiers dont le nom est *passwd* sur l'ordinateur :
-
-	> *find / -name passwd*
-
-21. Pour que la liste des fichiers trouvés soit enregistrée dans le fichier~/list_passwd_files.txtet que les erreurs soient redirigées vers le fichier spécial/dev/null, on utilise la commande suivante :
-
-	> *find / -name passwd > ~/list_passwd_files.txt 2>> /dev/null*
-
-22. En utilisant la commande suivante :
-
-	> *grep -ll*
-
-	on voit que ll est défini dans *grep [OPTION]... PATTERNS[FILE]...*
-
-23. On installe d'abord la commande *locate* avec la commande suivante :
-
-	> *apt install mlocate*
-
-	On peut ensuite chercher le chemin vers le fichier avec la commande suivante :
-
-	> *locate history.log*
-
-	On obtient alors le chemin */var/log/apt/history.log*
-
-24. Rien ne s'affiche lorsqu'on fait la commande *locate fichier_a_trouver*, alors que nous avions créé le fichier précédemment.
+Question 24) Rien ne s'affiche lorsqu'on fait la commande *locate fichier_a_trouver*, alors que nous avions créé le fichier précédemment.
+Rien apparait après avoir utiliser *locate* . Cela est surement du au fait que la base de donnée n'a pas été mise à jour depuis la création du fichier créé. Pour actualiser il faut faire la commande : updatedb.
 
 **Exercice 4**
 
-3. L’invite de commande passe en effet en couleur. La partie *rootoor@serveur* est verte, *~* devient bleue et *:$* blanche.
+Question 3) L’invite de commande change nien de couleur :  *rootoor@serveur* est vert,*:$* devient blanc et  *~* devient bleu.
 
-4. Il faut changer une séquence dans .bashrc. Pour cela on exécute la commande suivante :
+Question 4)
+Modifier la séquence dans .bashrc : *nano .bashrc*
+A la ligne commençant par *P1=* on ajoute * \[\e[31m\A\e[0m-\[\033[1;92m]\u@\h\[\033[00m\]*
 
-	> *nano .bashrc*
+Résultat : rootoor@serveur est en vert clair, le chemin est en bleu et l'heure est en rouge.
 
-	Puis on recherche dans le fichier les lignes commençant pas *P1=*.
-
-	Enfin on rajoute la ligne :
-
-	> * \[\e[31m\A\e[0m-\[\033[1;92m]\u@\h\[\033[00m\]*
-
-	On a ainsi l’heure en rouge, rootoor@serveur en vert clair et le chemin en bleu.
