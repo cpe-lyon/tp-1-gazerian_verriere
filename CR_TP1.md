@@ -1,13 +1,7 @@
-echo "# tp-1-gazerian_verriere" 
-git init
-git commit -m "first commit"
-git remote add origin https://github.com/cpe-lyon/tp-1-gazerian_verriere.git
-git push -u origin master
-
 Nicolas GAZERIAN, Nicolas VERRIERE
 4ETI
 
-** TP1 - Administration système : Compte Rendu**
+**TP1 - Administration système : Compte Rendu**
 
 **Exercice 1 :**
 
