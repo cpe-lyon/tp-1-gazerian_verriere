@@ -9,12 +9,12 @@ Nicolas GAZERIAN, Nicolas VERRIERE
 
 ** TP1 - Administration système : Compte Rendu**
 
-*Exercice 1 :*
+**Exercice 1 :**
 
 Installation du serveur sur machine virtuelle
 
 
-*Exercice 2*
+**Exercice 2**
 
 *Manuel*
 
@@ -82,17 +82,19 @@ La commande whereis nous renvoie :
 "ls: /bin/ls /usr/share/man/man1p/ls.1p.gz /usr/share/man/man1/ls.1.gz"
 Ce sont les différents chemins de localisation de ls
 
+
 4. La commande *ll* permet d'afficher l'intégralité des fichiers, y compris les fichiers cachés. Elle ne possède pas d'entrée dans le manuel car il s'agit d'un raccourci de la commande :
 
 	> *ls -alF* (cf. alias).
 
+
 Question 5)
 La commande ls/bin permet de voir le contenu du dossier bin
 
-Question 6)
-La commande ls . . renvoie les répertoires parents du dossier dans lequel on se trouve.
+6. La commande ls . . renvoie les répertoires parents du dossier dans lequel on se trouve.
 
-7. Il s'agit de la commande *pwd*.
+Question 7)
+C'est la commande pwd qui a ce rôle.
 
 8. On obtient un fichier texte *plop* dans le répertoire courant, avec écrit *yo* une fois dedans.
 
@@ -170,7 +172,7 @@ La commande ls . . renvoie les répertoires parents du dossier dans lequel on se
 
 24. Rien ne s'affiche lorsqu'on fait la commande *locate fichier_a_trouver*, alors que nous avions créé le fichier précédemment.
 
-## Exercice 4
+**Exercice 4**
 
 3. L’invite de commande passe en effet en couleur. La partie *rootoor@serveur* est verte, *~* devient bleue et *:$* blanche.
 
