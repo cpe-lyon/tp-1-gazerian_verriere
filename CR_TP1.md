@@ -145,7 +145,8 @@ Commande : *find / -name passwd*
 Question 21) 
 Pour rediriger le résultat dans un fihcier *~/list_passwd_files.txt* et que les erreurs soient redirigées vers me fichier spécial */dev/null* on fait la commande : *find / -name passwd > ~/list_passwd_files.txt 2>> /dev/null*
 
-Question 22) En utilisant la commande suivante :
+Question 22) 
+En utilisant la commande suivante :
 Commande : *grep -ll*
 Résultat : l'alias *ll* est défini dans *grep [OPTION]... PATTERNS[FILE]...*
 
@@ -155,12 +156,14 @@ Installation de *locate* : *apt install mlocate*
 Chercher le fichier history.log : *locate history.log*
 Résultat : */var/log/apt/history.log*
 
-Question 24) Rien ne s'affiche lorsqu'on fait la commande *locate fichier_a_trouver*, alors que nous avions créé le fichier précédemment.
+Question 24) 
+Rien ne s'affiche lorsqu'on fait la commande *locate fichier_a_trouver*, alors que nous avions créé le fichier précédemment.
 Rien apparait après avoir utiliser *locate* . Cela est surement du au fait que la base de donnée n'a pas été mise à jour depuis la création du fichier créé. Pour actualiser il faut faire la commande : updatedb.
 
 **Exercice 4**
 
-Question 3) L’invite de commande change nien de couleur :  *rootoor@serveur* est vert,*:$* devient blanc et  *~* devient bleu.
+Question 3)
+L’invite de commande change nien de couleur :  *rootoor@serveur* est vert,*:$* devient blanc et  *~* devient bleu.
 
 Question 4)
 Modifier la séquence dans .bashrc : *nano .bashrc*
