@@ -3,12 +3,12 @@ Nicolas GAZERIAN, Nicolas VERRIERE
 
 **TP1 - Administration système : Compte Rendu**
 
-**Exercice 1 :**
+**Exercice 2 :**
 
 Installation du serveur sur machine virtuelle
 
 
-**Exercice 2**
+**Exercice 2** 
 
 *Manuel*
 
